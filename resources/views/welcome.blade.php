@@ -2,7 +2,7 @@
 
 @section('content')
     
-  <div class="card-block">
+  <div class="card-block" style="margin-top: 100px;">
     <div class="col-sm-12 mt-1">
       @if (count($errors) > 0)
         <div class="alert alert-danger" role="alert">

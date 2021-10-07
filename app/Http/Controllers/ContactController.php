@@ -33,7 +33,7 @@ class ContactController extends Controller
             $this->sendEmailNotification($contactMessage->name, $contactMessage->subject, $contactMessage->email, $contactMessage->message);
         }
 
-        return back()->with('success', 'contact_form.message_sent');
+        return back()->with('success', 'Your message was sent!');
     }
 
     /**
