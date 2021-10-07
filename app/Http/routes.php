@@ -17,6 +17,8 @@ Route::get('/', function () {
 Route::get('/auth/login', function () {
     return view('auth/login');
 });
+Route::get('/contact', 'ContactController@showContactForm');
+Route::post('/contact', 'ContactController@contact')->name('contact');
 
 Route::any('logout', 'SearchController@logout')->name('logout');
 Route::get('login', 'Auth\AuthController@auth')->name('login');

@@ -2,6 +2,23 @@
 
 @section('content')
     
+  <div class="card-block">
+    <div class="col-sm-12 mt-1">
+      @if (count($errors) > 0)
+        <div class="alert alert-danger" role="alert">
+          <ul>
+            @foreach($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+      @if(session()->has('success'))
+        <div class="alert alert-success" role="alert">
+          {{ session('success') }}
+        </div>
+      @endif
+    </div>
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <ol class="carousel-indicators">
         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"><span>&nbsp;</span></li>
@@ -355,16 +372,17 @@
                 <h2>Contact Us</h2>
             </div>
             <div id="message_footer" style="text-align:center; padding-bottom: 15px; display: none;"></div>
-            <form id="contact_us_form" method="post" class="form-horizontal page contact_us_form" novalidate="" enctype="multipart/form-data" accept-charset="utf-8">
+            <form action="{{ route('contact') }}" method="POST" role="form" class="form-horizontal page contact_us_form" enctype="multipart/form-data" accept-charset="utf-8">
+              {{ csrf_field() }}
               <div class="row">
                 <div class="col-sm-12 requireSign">
                   <input type="text" placeholder="Name" id="name" name="name" class="form-control">
                 </div>
+                <div class="col-sm-12">
+                  <input type="text" placeholder="Subject" id="subject" name="subject" class="form-control">
+                </div>
                 <div class="col-sm-12 requireSign">
                   <input type="email" placeholder="Email" id="email" name="email" class="form-control">
-                </div>
-                <div class="col-sm-12">
-                  <input type="text" placeholder="Phone No." id="phone" name="phone" class="form-control">
                 </div>
                 <div class="col-sm-12 requireSign">
                   <textarea placeholder="Your Message" rows="2" name="message" id="message" class="form-control"></textarea>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a93a147c0180f09c4bf986310fe0f56",
+    "content-hash": "d8347d842df522b758c5a29e682d822c",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -406,6 +406,58 @@
                 "tokenizer"
             ],
             "time": "2018-03-21T22:21:57+00:00"
+        },
+        {
+            "name": "jtelesforoantonio/laravel-contact-form",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jtelesforoantonio/laravel-contact-form.git",
+                "reference": "ea4fdaeff0e5057b83c8250fc3f3793a74d64c7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jtelesforoantonio/laravel-contact-form/zipball/ea4fdaeff0e5057b83c8250fc3f3793a74d64c7f",
+                "reference": "ea4fdaeff0e5057b83c8250fc3f3793a74d64c7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JTelesforoAntonio\\LaravelContactForm\\ContactFormServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JTelesforoAntonio\\LaravelContactForm\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Telesforo Antonio",
+                    "email": "jonyjony777@gmail.com"
+                }
+            ],
+            "description": "Contact form for laravel",
+            "keywords": [
+                "contact",
+                "form",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/jtelesforoantonio/laravel-contact-form/issues",
+                "source": "https://github.com/jtelesforoantonio/laravel-contact-form/tree/develop"
+            },
+            "time": "2019-08-30T20:53:59+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3473,5 +3525,6 @@
     "platform": {
         "php": ">=5.5.9"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
